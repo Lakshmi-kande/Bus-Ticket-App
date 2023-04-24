@@ -1,10 +1,15 @@
 const mongoose = require('mongoose');
 
-const busSchema = new mongoose.Schema({
+const busSchema = mongoose.Schema({
+    busId:{
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'user'
+    },
     busNum: {
         type: String, 
         required: true 
-    },  
+    }, 
     busType: { 
         type: String, 
         required: true 
